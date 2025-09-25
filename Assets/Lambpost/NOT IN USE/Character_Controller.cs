@@ -7,7 +7,7 @@ public class Character_Controller : MonoBehaviour
 {
     public int playerIndex;
 
-    private float moveSpeed = 0.0025f;
+    public float moveSpeed = 0.0025f;
     private float minX = -2f;
     private float maxX = 2f;
     private float buffer = 1f;
