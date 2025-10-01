@@ -10,10 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 3964047964705988448}
   - component: {fileID: 1516852644461372746}
-  - component: {fileID: 2815500984658207399}
   - component: {fileID: 406821799119484558}
   - component: {fileID: 7322795970212138925}
   - component: {fileID: 4102761081824193507}
+  - component: {fileID: 3005260859008326916}
+  - component: {fileID: -660625844008122485}
   m_Layer: 19
   m_Name: ProblemBlock
   m_TagString: Untagged
@@ -91,38 +92,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2815500984658207399
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1116977410919793959}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b21b9750bd042dd418fa00a9046c0830, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  colourIndex: 0
-  textIndex: 0
-  onPlatform: 0
-  SR: {fileID: 0}
-  textComp: {fileID: 0}
-  SpawnNext:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Spawner, Assembly-CSharp
-        m_MethodName: Spawn
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!50 &406821799119484558
 Rigidbody2D:
   serializedVersion: 4
@@ -138,7 +107,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0.5
+  m_GravityScale: 0.25
   m_Material: {fileID: 6200000, guid: 3e0bca40eb6bc7f4295433f237d5cae2, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
@@ -208,6 +177,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8d485e3e071da048af917e27a5dd03b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3005260859008326916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1116977410919793959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4503d47aa0f0d514bb807ee64d7c478e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SR: {fileID: 1516852644461372746}
+  textComp: {fileID: 2032315094782493881}
+--- !u!114 &-660625844008122485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1116977410919793959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb638aa3c8eb8e24fb974b8c78dd93a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnedNext: 0
+  SpawnNext:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4048806946336281465
 GameObject:
   m_ObjectHideFlags: 0
