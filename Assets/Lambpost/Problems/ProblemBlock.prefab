@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7322795970212138925}
   - component: {fileID: 4102761081824193507}
   - component: {fileID: 3005260859008326916}
+  - component: {fileID: -660625844008122485}
   m_Layer: 19
   m_Name: ProblemBlock
   m_TagString: Untagged
@@ -106,7 +107,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0.5
+  m_GravityScale: 0.25
   m_Material: {fileID: 6200000, guid: 3e0bca40eb6bc7f4295433f237d5cae2, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
@@ -190,6 +191,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SR: {fileID: 1516852644461372746}
   textComp: {fileID: 2032315094782493881}
+--- !u!114 &-660625844008122485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1116977410919793959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb638aa3c8eb8e24fb974b8c78dd93a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnedNext: 0
+  SpawnNext:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4048806946336281465
 GameObject:
   m_ObjectHideFlags: 0
