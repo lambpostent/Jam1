@@ -6,14 +6,24 @@ using UnityEngine.Events;
 public class GameTracker : MonoBehaviour
 {
     public UnityEvent KnockoutEvent;
+    public UnityEvent MoveUp;
+    public UnityEvent MoveDown;
 
     #region Variables
     public int lives;
+    public int platformCount;
     #endregion
 
-    private void Start()
+    public void AddCount()
     {
-        lives = 3;
+        platformCount += 1;
+        MoveDown?.Invoke();
+    }
+
+    public void RemoveCount()
+    {
+        platformCount -= 1;
+        MoveUp?.Invoke();
     }
 
     public void LoseLife()

@@ -1,34 +1,37 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 
 public class Randomise : MonoBehaviour
 {
     #region Variables
     //Arrays
     private Color[] colours;
-    private string[] text;
     //Components
     public SpriteRenderer SR;
-    public TMP_Text textComp;
     //Values
     private int colourIndex;
-    private int textIndex;
     #endregion
     
     private void Start()
     {
         //Fill arrays
         FillColours();
-        FillProblems();
 
-        //Get random index for the two arrays.
+        //Get random index.
         colourIndex = Random.Range(0, colours.Length);
-        textIndex = Random.Range(0, text.Length);
-        //Set random colour and text
+        //Set random colour
         SR.color = colours[colourIndex];
-        textComp.text = text[textIndex];
+
+        RandomSize();
+    }
+
+    private void RandomSize()
+    {
+        float randX = Random.Range(0.25f, 1f);
+        float randY = Random.Range(0.25f, 1f);
+        float randZ = Random.Range(0.25f, 1f);
+        gameObject.transform.localScale = new Vector3(randX, randY, randZ);
     }
 
     private void FillColours()
@@ -44,20 +47,5 @@ public class Randomise : MonoBehaviour
         colours[7] = new Color(0.44f, 0.50f, 0.56f);
         colours[8] = new Color(1f, 0f, 1f);
         colours[9] = new Color(0f, 0.75f, 1f);
-    }
-
-    private void FillProblems()
-    {
-        text = new string[10];
-        text[0] = "School";
-        text[1] = "Friend";
-        text[2] = "Family";
-        text[3] = "Money";
-        text[4] = "Car Troubles";
-        text[5] = "Illness";
-        text[6] = "Self Harm";
-        text[7] = "Exams";
-        text[8] = "War";
-        text[9] = "Society";
     }
 }

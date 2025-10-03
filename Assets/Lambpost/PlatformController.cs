@@ -21,6 +21,7 @@ public class PlatformController : MonoBehaviour
     private float sectionWidth;
 
     private Rigidbody2D rb;
+    private bool isMoving;
 
     #endregion
 
@@ -72,5 +73,64 @@ public class PlatformController : MonoBehaviour
         //Apply velocity based on clamp.
         velocity.x = (nextX - rb.position.x) / Time.fixedDeltaTime;
         rb.velocity = velocity;
+    }
+
+    public void MoveUpFunction()
+    {
+        StartCoroutine("MoveUp");
+    }
+
+    public void MoveDownFunction()
+    {
+        StartCoroutine("MoveDown");
+    }
+
+    private IEnumerator MoveUp()
+    {
+        if (isMoving)
+        {
+            yield return null;
+        }
+
+        Vector2 startPos = transform.position;
+        Vector2 endPos = new Vector2(transform.position.x, (transform.position.y + 1f));
+
+        float elapsedTime = 0f;
+
+        while (elapsedTime < 1f)
+        {
+            transform.position = Vector2.Lerp(startPos, endPos, elapsedTime/1f);
+            elapsedTime += Time.deltaTime;
+            isMoving = true;
+            yield return null;
+        }
+
+        isMoving = false;
+        //transform.position = endPos;
+    }
+
+    private IEnumerator MoveDown()
+    {
+        if (isMoving)
+        {
+            yield return null;
+        }
+
+        Vector2 startPos = transform.position;
+        Vector2 endPos = new Vector2(transform.position.x, (transform.position.y - 1f));
+
+        float elapsedTime = 0f;
+
+        while (elapsedTime < 1f)
+        {
+            transform.position = Vector2.Lerp(startPos, endPos, elapsedTime/1f);
+            elapsedTime += Time.deltaTime;
+            isMoving = true;
+            yield return null;
+        }
+
+        isMoving = false;
+
+        //transform.position = endPos;
     }
 }

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7322795970212138925}
   - component: {fileID: 4102761081824193507}
   - component: {fileID: 3005260859008326916}
-  - component: {fileID: -660625844008122485}
+  - component: {fileID: 127022453764238606}
   m_Layer: 19
   m_Name: ProblemBlock
   m_TagString: Untagged
@@ -118,7 +118,7 @@ Rigidbody2D:
   m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &7322795970212138925
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -190,8 +190,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SR: {fileID: 1516852644461372746}
-  textComp: {fileID: 2032315094782493881}
---- !u!114 &-660625844008122485
+--- !u!114 &127022453764238606
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -200,11 +199,41 @@ MonoBehaviour:
   m_GameObject: {fileID: 1116977410919793959}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb638aa3c8eb8e24fb974b8c78dd93a3, type: 3}
+  m_Script: {fileID: 11500000, guid: 148d1126a5be6d3409a18df23fb8d630, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   spawnedNext: 0
   SpawnNext:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  AddCount:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  RemoveCount:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
@@ -236,7 +265,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4856906377670756408
 RectTransform:
   m_ObjectHideFlags: 0
