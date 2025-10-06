@@ -36,6 +36,7 @@ public class PlatformController : MonoBehaviour
     void Update()
     {
         ApplyMovement();
+        SetVertical();
     }
 
     void OnCollisionStay2D(Collision2D other)
@@ -75,6 +76,13 @@ public class PlatformController : MonoBehaviour
         rb.velocity = velocity;
     }
 
+    private void SetVertical()
+    {
+        int allChildCount = GetComponentsInChildren<Transform>().Length - 1;
+        transform.position = new Vector2(transform.position.x, -allChildCount);
+    }
+    /*Vertical Movement logic based on number of blocks on platform
+     * Removed due to it not working overly well.
     public void MoveUpFunction()
     {
         if (!isMoving)
@@ -112,7 +120,7 @@ public class PlatformController : MonoBehaviour
         rb.MovePosition(endPos);
         isMoving = false;
     }
-
+    */
     /* Old vertical movement logic, keep for redundency.
     private IEnumerator MoveUp()
     {

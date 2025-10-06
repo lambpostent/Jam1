@@ -10,10 +10,11 @@ public class SpawnScript : MonoBehaviour
     public bool spawnedNext;
     private int combinedMask;
     private BoxCollider2D boxCol;
-    RaycastHit2D hit;
+    public RaycastHit2D hit;
     //Raycast origins
     private Vector2[] origins;
-    private float halfWidth;
+    private float colWidth;
+    private float offset;
 
     public UnityEvent SpawnNext;
     public UnityEvent AddCount;
@@ -23,7 +24,6 @@ public class SpawnScript : MonoBehaviour
     {
         combinedMask = LayerMask.GetMask("Problem", "Platform");
         boxCol = GetComponent<BoxCollider2D>();
-        halfWidth = boxCol.bounds.extents.x;
     }
 
     private void Update()
@@ -31,18 +31,21 @@ public class SpawnScript : MonoBehaviour
         /*origin = new Vector2(boxCol.bounds.center.x, (boxCol.bounds.min.y - 0.01f));
         RaycastHit2D hit = Physics2D.Raycast(origin, Vector2.down, 0.05f, combinedMask);
         onPlatform = hit.collider != null;*/
-
+        colWidth = boxCol.size.x * transform.localScale.x;
+        offset = colWidth / 2f;
         //Replaced to allow for multiple raycasts.
         origins = new Vector2[] {
-        new Vector2(transform.position.x - halfWidth / 2f, boxCol.bounds.min.y - 0.01f),
+        new Vector2(transform.position.x - offset, boxCol.bounds.min.y - 0.01f),
         new Vector2(transform.position.x, boxCol.bounds.min.y - 0.01f),
-        new Vector2(transform.position.x + halfWidth / 2f, boxCol.bounds.min.y - 0.01f)
+        new Vector2(transform.position.x + offset, boxCol.bounds.min.y - 0.01f)
         };
+        //Reset hit for remove count event
+        hit = new RaycastHit2D();
 
         foreach(var origin in origins)
         {
             var tempHit = Physics2D.Raycast(origin, Vector2.down, 0.05f, combinedMask);
-
+            Debug.DrawRay(origin, Vector2.down * 5f, Color.blue);
             if(tempHit.collider != null)
             {
                 hit = tempHit;

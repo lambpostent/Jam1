@@ -8,6 +8,7 @@ public class Spawner : MonoBehaviour
 {
     public GameObject prefab;
     public GameTracker gt;
+    public Transform platform;
 
     public int numberSpawned;
     public int spawnTarget;
@@ -26,10 +27,11 @@ public class Spawner : MonoBehaviour
         {
             GameObject instance = Instantiate(prefab, transform.position, Quaternion.identity);
             SpawnProblem?.Invoke();
-            SpawnScript prob = instance.GetComponent<SpawnScript>();
+            ParentingMethod prob = instance.GetComponent<ParentingMethod>();
             prob.SpawnNext.AddListener(this.Spawn);
-            prob.AddCount.AddListener(gt.AddCount);
-            prob.RemoveCount.AddListener(gt.RemoveCount);
+            prob.SetPlatform(platform);
+            //prob.AddCount.AddListener(gt.AddCount);
+            //prob.RemoveCount.AddListener(gt.RemoveCount);
             numberSpawned++;
         }
         else if (numberSpawned >= spawnTarget)

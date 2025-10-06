@@ -880,6 +880,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 913350897}
     - target: {fileID: 4068676306709041261, guid: 9bc9782de6226de40bae045498481db9, type: 3}
+      propertyPath: prefab
+      value: 
+      objectReference: {fileID: 1116977410919793959, guid: 044874af21c5bbe4abbdff93e9e0dd86, type: 3}
+    - target: {fileID: 4068676306709041261, guid: 9bc9782de6226de40bae045498481db9, type: 3}
+      propertyPath: platform
+      value: 
+      objectReference: {fileID: 742108804}
+    - target: {fileID: 4068676306709041261, guid: 9bc9782de6226de40bae045498481db9, type: 3}
       propertyPath: spawnTarget
       value: 10
       objectReference: {fileID: 0}
@@ -978,6 +986,14 @@ PrefabInstance:
       propertyPath: gt
       value: 
       objectReference: {fileID: 1222381291}
+    - target: {fileID: 4068676306709041261, guid: 9bc9782de6226de40bae045498481db9, type: 3}
+      propertyPath: prefab
+      value: 
+      objectReference: {fileID: 1116977410919793959, guid: 044874af21c5bbe4abbdff93e9e0dd86, type: 3}
+    - target: {fileID: 4068676306709041261, guid: 9bc9782de6226de40bae045498481db9, type: 3}
+      propertyPath: platform
+      value: 
+      objectReference: {fileID: 1570714727}
     - target: {fileID: 4068676306709041261, guid: 9bc9782de6226de40bae045498481db9, type: 3}
       propertyPath: spawnTarget
       value: 10
@@ -1657,7 +1673,7 @@ MonoBehaviour:
   MoveDown:
     m_PersistentCalls:
       m_Calls: []
-  lives: 3
+  lives: 9999
   platformCount: 0
 --- !u!1 &941284918
 GameObject:
@@ -1909,7 +1925,7 @@ MonoBehaviour:
   MoveDown:
     m_PersistentCalls:
       m_Calls: []
-  lives: 3
+  lives: 9999
   platformCount: 0
 --- !u!1 &1042110496
 GameObject:
@@ -2417,7 +2433,7 @@ MonoBehaviour:
   MoveDown:
     m_PersistentCalls:
       m_Calls: []
-  lives: 3
+  lives: 9999
   platformCount: 0
 --- !u!1 &1238152915
 GameObject:
@@ -3800,6 +3816,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 999230239}
     - target: {fileID: 4068676306709041261, guid: 9bc9782de6226de40bae045498481db9, type: 3}
+      propertyPath: prefab
+      value: 
+      objectReference: {fileID: 1116977410919793959, guid: 044874af21c5bbe4abbdff93e9e0dd86, type: 3}
+    - target: {fileID: 4068676306709041261, guid: 9bc9782de6226de40bae045498481db9, type: 3}
+      propertyPath: platform
+      value: 
+      objectReference: {fileID: 1561635436}
+    - target: {fileID: 4068676306709041261, guid: 9bc9782de6226de40bae045498481db9, type: 3}
       propertyPath: spawnTarget
       value: 10
       objectReference: {fileID: 0}
@@ -5034,6 +5058,14 @@ PrefabInstance:
       propertyPath: gt
       value: 
       objectReference: {fileID: 941284920}
+    - target: {fileID: 4068676306709041261, guid: 9bc9782de6226de40bae045498481db9, type: 3}
+      propertyPath: prefab
+      value: 
+      objectReference: {fileID: 1116977410919793959, guid: 044874af21c5bbe4abbdff93e9e0dd86, type: 3}
+    - target: {fileID: 4068676306709041261, guid: 9bc9782de6226de40bae045498481db9, type: 3}
+      propertyPath: platform
+      value: 
+      objectReference: {fileID: 1475681097}
     - target: {fileID: 4068676306709041261, guid: 9bc9782de6226de40bae045498481db9, type: 3}
       propertyPath: spawnTarget
       value: 10

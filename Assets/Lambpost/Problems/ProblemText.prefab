@@ -189,14 +189,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textArray:
-  - Body Issues
+  - Body
   - Family
   - Friends
-  - Living Conditions
-  - Lonliness
-  - Neurodiversity
-  - Peer Pressure
-  - Schedule Load
+  - Home
+  - Loneliness
+  - Mind
+  - Pressure
+  - Time
   - School
   - Work
   text: {fileID: 4590180557332739090}
