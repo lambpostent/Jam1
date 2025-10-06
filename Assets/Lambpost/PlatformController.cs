@@ -77,21 +77,45 @@ public class PlatformController : MonoBehaviour
 
     public void MoveUpFunction()
     {
-        StartCoroutine("MoveUp");
+        if (!isMoving)
+        {
+            StartCoroutine(MoveVertical(1f));
+        }
     }
 
     public void MoveDownFunction()
     {
-        StartCoroutine("MoveDown");
+        if (!isMoving)
+        {
+            StartCoroutine(MoveVertical(-1f));
+        }
     }
 
-    private IEnumerator MoveUp()
+    private IEnumerator MoveVertical(float direction)
     {
-        if (isMoving)
+        Vector2 startPos = rb.position;
+        Vector2 endPos = startPos + Vector2.up * direction;
+
+        float duration = 0.5f;
+        float elapsedTime = 0f;
+
+        isMoving = true;
+
+        while (elapsedTime < duration)
         {
+            Vector2 newPos = Vector2.Lerp(startPos, endPos, elapsedTime / duration);
+            rb.MovePosition(newPos);
+            elapsedTime += Time.deltaTime;
             yield return null;
         }
 
+        rb.MovePosition(endPos);
+        isMoving = false;
+    }
+
+    /* Old vertical movement logic, keep for redundency.
+    private IEnumerator MoveUp()
+    {
         Vector2 startPos = transform.position;
         Vector2 endPos = new Vector2(transform.position.x, (transform.position.y + 1f));
 
@@ -106,16 +130,11 @@ public class PlatformController : MonoBehaviour
         }
 
         isMoving = false;
-        //transform.position = endPos;
+        transform.position = endPos;
     }
 
     private IEnumerator MoveDown()
     {
-        if (isMoving)
-        {
-            yield return null;
-        }
-
         Vector2 startPos = transform.position;
         Vector2 endPos = new Vector2(transform.position.x, (transform.position.y - 1f));
 
@@ -131,6 +150,7 @@ public class PlatformController : MonoBehaviour
 
         isMoving = false;
 
-        //transform.position = endPos;
+        transform.position = endPos;
     }
+    */
 }
