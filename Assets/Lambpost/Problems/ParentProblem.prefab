@@ -12,13 +12,11 @@ GameObject:
   - component: {fileID: 1516852644461372746}
   - component: {fileID: 406821799119484558}
   - component: {fileID: 7322795970212138925}
-  - component: {fileID: 4102761081824193507}
   - component: {fileID: 3005260859008326916}
-  - component: {fileID: 127022453764238606}
   - component: {fileID: -4253597306200222335}
   m_Layer: 19
   m_Name: ParentProblem
-  m_TagString: Untagged
+  m_TagString: Problem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -166,18 +164,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &4102761081824193507
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1116977410919793959}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8d485e3e071da048af917e27a5dd03b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &3005260859008326916
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -191,64 +177,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SR: {fileID: 1516852644461372746}
---- !u!114 &127022453764238606
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1116977410919793959}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 148d1126a5be6d3409a18df23fb8d630, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnedNext: 0
-  SpawnNext:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  AddCount:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  RemoveCount:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &-4253597306200222335
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -261,6 +189,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cececdcacf02eec408c34616de4449f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnedNext: 0
   SpawnNext:
     m_PersistentCalls:
       m_Calls:

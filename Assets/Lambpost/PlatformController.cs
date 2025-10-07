@@ -21,7 +21,9 @@ public class PlatformController : MonoBehaviour
     private float sectionWidth;
 
     private Rigidbody2D rb;
-    private bool isMoving;
+    //private bool isMoving;
+    public GameTracker gt;
+    private float previousCount;
 
     #endregion
 
@@ -78,9 +80,19 @@ public class PlatformController : MonoBehaviour
 
     private void SetVertical()
     {
-        int allChildCount = GetComponentsInChildren<Transform>().Length - 1;
-        transform.position = new Vector2(transform.position.x, -allChildCount);
+        float allChildCount = GetComponentsInChildren<Transform>().Length - 1;
+        if (allChildCount != previousCount)
+        {
+            float blockWeight = allChildCount / 2;
+            gt.blocks = allChildCount;
+            transform.position = new Vector2(transform.position.x, -blockWeight);
+            previousCount = allChildCount;
+        }
     }
+
+
+
+
     /*Vertical Movement logic based on number of blocks on platform
      * Removed due to it not working overly well.
     public void MoveUpFunction()

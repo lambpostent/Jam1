@@ -5,35 +5,16 @@ using UnityEngine.Events;
 
 public class GameTracker : MonoBehaviour
 {
-    public UnityEvent KnockoutEvent;
-    public UnityEvent MoveUp;
-    public UnityEvent MoveDown;
-
     #region Variables
-    public int lives;
-    public int platformCount;
+    public float blocks;
     #endregion
 
-    public void AddCount()
+    private void Update()
     {
-        platformCount += 1;
-        MoveDown?.Invoke();
-    }
-
-    public void RemoveCount()
-    {
-        platformCount -= 1;
-        MoveUp?.Invoke();
-    }
-
-    public void LoseLife()
-    {
-        lives -= 1;
-
-        if (lives <= 0)
+        if (blocks >= 10)
         {
-            KnockoutEvent?.Invoke();
-            Destroy(gameObject);
+            Debug.Log("Platform reached bottom!");
         }
     }
+    
 }

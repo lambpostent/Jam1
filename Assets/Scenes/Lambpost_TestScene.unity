@@ -318,7 +318,6 @@ GameObject:
   - component: {fileID: 168900407}
   - component: {fileID: 168900406}
   - component: {fileID: 168900405}
-  - component: {fileID: 168900408}
   m_Layer: 0
   m_Name: Bottom
   m_TagString: Untagged
@@ -353,21 +352,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdc2d65bd51f81e4ba52b114d3686c36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BlockFallEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 941284920}
-        m_TargetAssemblyTypeName: GameTracker, Assembly-CSharp
-        m_MethodName: LoseLife
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!61 &168900406
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -468,52 +452,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &168900408
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 168900403}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!1 &239870058
 GameObject:
   m_ObjectHideFlags: 0
@@ -889,7 +827,7 @@ PrefabInstance:
       objectReference: {fileID: 742108804}
     - target: {fileID: 4068676306709041261, guid: 9bc9782de6226de40bae045498481db9, type: 3}
       propertyPath: spawnTarget
-      value: 10
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 8943051060323137945, guid: 9bc9782de6226de40bae045498481db9, type: 3}
       propertyPath: m_Name
@@ -996,7 +934,7 @@ PrefabInstance:
       objectReference: {fileID: 1570714727}
     - target: {fileID: 4068676306709041261, guid: 9bc9782de6226de40bae045498481db9, type: 3}
       propertyPath: spawnTarget
-      value: 10
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 8943051060323137945, guid: 9bc9782de6226de40bae045498481db9, type: 3}
       propertyPath: m_Name
@@ -1402,6 +1340,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8235785005479014231, guid: 97b9677e6ffde144ba4c84a07671738e, type: 3}
+      propertyPath: gt
+      value: 
+      objectReference: {fileID: 913350897}
+    - target: {fileID: 8235785005479014231, guid: 97b9677e6ffde144ba4c84a07671738e, type: 3}
       propertyPath: playerIndex
       value: 2
       objectReference: {fileID: 0}
@@ -1652,29 +1594,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10daedeffb73ae94eb6d5307547cfe90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  KnockoutEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1885521315}
-        m_TargetAssemblyTypeName: EventManager, Assembly-CSharp
-        m_MethodName: KnockoutFunction
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  MoveUp:
-    m_PersistentCalls:
-      m_Calls: []
-  MoveDown:
-    m_PersistentCalls:
-      m_Calls: []
-  lives: 9999
-  platformCount: 0
+  blocks: 0
 --- !u!1 &941284918
 GameObject:
   m_ObjectHideFlags: 0
@@ -1723,53 +1643,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10daedeffb73ae94eb6d5307547cfe90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  KnockoutEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1885521315}
-        m_TargetAssemblyTypeName: EventManager, Assembly-CSharp
-        m_MethodName: KnockoutFunction
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  MoveUp:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1475681098}
-        m_TargetAssemblyTypeName: PlatformController, Assembly-CSharp
-        m_MethodName: MoveUpFunction
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  MoveDown:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1475681098}
-        m_TargetAssemblyTypeName: PlatformController, Assembly-CSharp
-        m_MethodName: MoveDownFunction
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  lives: 9999
-  platformCount: 0
+  blocks: 0
 --- !u!1 &974493906
 GameObject:
   m_ObjectHideFlags: 0
@@ -1904,29 +1778,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10daedeffb73ae94eb6d5307547cfe90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  KnockoutEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1885521315}
-        m_TargetAssemblyTypeName: EventManager, Assembly-CSharp
-        m_MethodName: KnockoutFunction
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  MoveUp:
-    m_PersistentCalls:
-      m_Calls: []
-  MoveDown:
-    m_PersistentCalls:
-      m_Calls: []
-  lives: 9999
-  platformCount: 0
+  blocks: 0
 --- !u!1 &1042110496
 GameObject:
   m_ObjectHideFlags: 0
@@ -2210,21 +2062,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdc2d65bd51f81e4ba52b114d3686c36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BlockFallEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1222381291}
-        m_TargetAssemblyTypeName: GameTracker, Assembly-CSharp
-        m_MethodName: LoseLife
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!61 &1173996452
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2412,29 +2249,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10daedeffb73ae94eb6d5307547cfe90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  KnockoutEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1885521315}
-        m_TargetAssemblyTypeName: EventManager, Assembly-CSharp
-        m_MethodName: KnockoutFunction
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  MoveUp:
-    m_PersistentCalls:
-      m_Calls: []
-  MoveDown:
-    m_PersistentCalls:
-      m_Calls: []
-  lives: 9999
-  platformCount: 0
+  blocks: 0
 --- !u!1 &1238152915
 GameObject:
   m_ObjectHideFlags: 0
@@ -3029,6 +2844,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8235785005479014231, guid: 97b9677e6ffde144ba4c84a07671738e, type: 3}
+      propertyPath: gt
+      value: 
+      objectReference: {fileID: 941284920}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3039,17 +2858,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7138886108809653195, guid: 97b9677e6ffde144ba4c84a07671738e, type: 3}
   m_PrefabInstance: {fileID: 1475681096}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1475681098 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8235785005479014231, guid: 97b9677e6ffde144ba4c84a07671738e, type: 3}
-  m_PrefabInstance: {fileID: 1475681096}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 585b0c6b53a787d499838099a8b0cb05, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1511111748
 GameObject:
   m_ObjectHideFlags: 0
@@ -3308,6 +3116,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8235785005479014231, guid: 97b9677e6ffde144ba4c84a07671738e, type: 3}
+      propertyPath: gt
+      value: 
+      objectReference: {fileID: 999230239}
+    - target: {fileID: 8235785005479014231, guid: 97b9677e6ffde144ba4c84a07671738e, type: 3}
       propertyPath: playerIndex
       value: 3
       objectReference: {fileID: 0}
@@ -3374,6 +3186,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8235785005479014231, guid: 97b9677e6ffde144ba4c84a07671738e, type: 3}
+      propertyPath: gt
+      value: 
+      objectReference: {fileID: 1222381291}
+    - target: {fileID: 8235785005479014231, guid: 97b9677e6ffde144ba4c84a07671738e, type: 3}
       propertyPath: playerIndex
       value: 1
       objectReference: {fileID: 0}
@@ -3433,21 +3249,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdc2d65bd51f81e4ba52b114d3686c36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BlockFallEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 913350897}
-        m_TargetAssemblyTypeName: GameTracker, Assembly-CSharp
-        m_MethodName: LoseLife
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!61 &1576069191
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3825,7 +3626,7 @@ PrefabInstance:
       objectReference: {fileID: 1561635436}
     - target: {fileID: 4068676306709041261, guid: 9bc9782de6226de40bae045498481db9, type: 3}
       propertyPath: spawnTarget
-      value: 10
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 8943051060323137945, guid: 9bc9782de6226de40bae045498481db9, type: 3}
       propertyPath: m_Name
@@ -3833,7 +3634,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8962495118321543931, guid: 9bc9782de6226de40bae045498481db9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 8962495118321543931, guid: 9bc9782de6226de40bae045498481db9, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4094,21 +3895,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdc2d65bd51f81e4ba52b114d3686c36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BlockFallEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 999230239}
-        m_TargetAssemblyTypeName: GameTracker, Assembly-CSharp
-        m_MethodName: LoseLife
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!61 &1749713100
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5068,7 +4854,7 @@ PrefabInstance:
       objectReference: {fileID: 1475681097}
     - target: {fileID: 4068676306709041261, guid: 9bc9782de6226de40bae045498481db9, type: 3}
       propertyPath: spawnTarget
-      value: 10
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 4068676306709041261, guid: 9bc9782de6226de40bae045498481db9, type: 3}
       propertyPath: SpawnProblem.m_PersistentCalls.m_Calls.Array.size
@@ -5104,7 +4890,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8962495118321543931, guid: 9bc9782de6226de40bae045498481db9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -1.5
       objectReference: {fileID: 0}
     - target: {fileID: 8962495118321543931, guid: 9bc9782de6226de40bae045498481db9, type: 3}
       propertyPath: m_LocalPosition.y

@@ -14,10 +14,15 @@ public class Spawner : MonoBehaviour
     public int spawnTarget;
     private bool spawningComplete;
 
+    private Vector2 minX;
+    private Vector2 maxX;
+
     public UnityEvent SpawnProblem;
 
     void Start()
     {
+        minX = new Vector2(transform.position.x - 2f, 6f);
+        maxX = new Vector2(transform.position.x + 2f, 6f);
         Spawn();
     }
 
@@ -25,8 +30,12 @@ public class Spawner : MonoBehaviour
     {
         if (numberSpawned < spawnTarget)
         {
-            GameObject instance = Instantiate(prefab, transform.position, Quaternion.identity);
+            float tempPoint = Random.Range(0f, 1f);
+            Vector2 spawnLocation = Vector2.Lerp(minX, maxX, tempPoint);
+
+            GameObject instance = Instantiate(prefab, spawnLocation, Quaternion.identity);
             SpawnProblem?.Invoke();
+
             ParentingMethod prob = instance.GetComponent<ParentingMethod>();
             prob.SpawnNext.AddListener(this.Spawn);
             prob.SetPlatform(platform);
