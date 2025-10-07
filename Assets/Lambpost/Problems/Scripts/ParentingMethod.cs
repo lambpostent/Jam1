@@ -13,6 +13,10 @@ public class ParentingMethod : MonoBehaviour
     private BoxCollider2D boxCol;
     private RaycastHit2D hit;
 
+    //Audio
+    public AudioClip[] clips;
+    private AudioSource audioSource;
+
     //Raycast origins
     private Vector2[] origins;
     private float colWidth;
@@ -26,6 +30,7 @@ public class ParentingMethod : MonoBehaviour
     {
         combinedMask = LayerMask.GetMask("Problem", "Platform");
         boxCol = GetComponent<BoxCollider2D>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -61,7 +66,16 @@ public class ParentingMethod : MonoBehaviour
         else if (onPlatform && spawnedNext)
         {
             transform.SetParent(platform);
+            //PlayRandomSound();
         }
+    }
+
+    private void PlayRandomSound()
+    {
+        int index = Random.Range(0, clips.Length);
+        audioSource.clip = clips[index];
+        audioSource.Play();
+        UnityEngine.Debug.Log("PlaySound");
     }
 
     public void SetPlatform(Transform plat)

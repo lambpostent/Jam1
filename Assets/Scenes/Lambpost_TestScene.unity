@@ -829,6 +829,34 @@ PrefabInstance:
       propertyPath: spawnTarget
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 4068676306709041261, guid: 9bc9782de6226de40bae045498481db9, type: 3}
+      propertyPath: SpawnProblem.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068676306709041261, guid: 9bc9782de6226de40bae045498481db9, type: 3}
+      propertyPath: SpawnProblem.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068676306709041261, guid: 9bc9782de6226de40bae045498481db9, type: 3}
+      propertyPath: SpawnProblem.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 758879236}
+    - target: {fileID: 4068676306709041261, guid: 9bc9782de6226de40bae045498481db9, type: 3}
+      propertyPath: SpawnProblem.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068676306709041261, guid: 9bc9782de6226de40bae045498481db9, type: 3}
+      propertyPath: SpawnProblem.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RandomiseText
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068676306709041261, guid: 9bc9782de6226de40bae045498481db9, type: 3}
+      propertyPath: SpawnProblem.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: TextRandomiser, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068676306709041261, guid: 9bc9782de6226de40bae045498481db9, type: 3}
+      propertyPath: SpawnProblem.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8943051060323137945, guid: 9bc9782de6226de40bae045498481db9, type: 3}
       propertyPath: m_Name
       value: BlockSpawner
@@ -935,6 +963,34 @@ PrefabInstance:
     - target: {fileID: 4068676306709041261, guid: 9bc9782de6226de40bae045498481db9, type: 3}
       propertyPath: spawnTarget
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068676306709041261, guid: 9bc9782de6226de40bae045498481db9, type: 3}
+      propertyPath: SpawnProblem.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068676306709041261, guid: 9bc9782de6226de40bae045498481db9, type: 3}
+      propertyPath: SpawnProblem.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068676306709041261, guid: 9bc9782de6226de40bae045498481db9, type: 3}
+      propertyPath: SpawnProblem.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1806198551}
+    - target: {fileID: 4068676306709041261, guid: 9bc9782de6226de40bae045498481db9, type: 3}
+      propertyPath: SpawnProblem.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068676306709041261, guid: 9bc9782de6226de40bae045498481db9, type: 3}
+      propertyPath: SpawnProblem.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RandomiseText
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068676306709041261, guid: 9bc9782de6226de40bae045498481db9, type: 3}
+      propertyPath: SpawnProblem.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: TextRandomiser, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068676306709041261, guid: 9bc9782de6226de40bae045498481db9, type: 3}
+      propertyPath: SpawnProblem.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8943051060323137945, guid: 9bc9782de6226de40bae045498481db9, type: 3}
       propertyPath: m_Name
@@ -1357,6 +1413,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7138886108809653195, guid: 97b9677e6ffde144ba4c84a07671738e, type: 3}
   m_PrefabInstance: {fileID: 742108803}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &758879236 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8905630780491793861, guid: 44b8be9828b2a16458ac1f0657107f58, type: 3}
+  m_PrefabInstance: {fileID: 426140666}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c706ff96d746d7647a337378bc2e6cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &838525434 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8962495118321543931, guid: 9bc9782de6226de40bae045498481db9, type: 3}
@@ -1595,6 +1662,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blocks: 0
+  Knockout:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1885521315}
+        m_TargetAssemblyTypeName: EventManager, Assembly-CSharp
+        m_MethodName: KnockoutFunction
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &941284918
 GameObject:
   m_ObjectHideFlags: 0
@@ -1644,6 +1726,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blocks: 0
+  Knockout:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1885521315}
+        m_TargetAssemblyTypeName: EventManager, Assembly-CSharp
+        m_MethodName: KnockoutFunction
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &974493906
 GameObject:
   m_ObjectHideFlags: 0
@@ -1779,6 +1876,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blocks: 0
+  Knockout:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1885521315}
+        m_TargetAssemblyTypeName: EventManager, Assembly-CSharp
+        m_MethodName: KnockoutFunction
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1042110496
 GameObject:
   m_ObjectHideFlags: 0
@@ -2250,6 +2362,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blocks: 0
+  Knockout:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1885521315}
+        m_TargetAssemblyTypeName: EventManager, Assembly-CSharp
+        m_MethodName: KnockoutFunction
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1238152915
 GameObject:
   m_ObjectHideFlags: 0
@@ -3628,6 +3755,34 @@ PrefabInstance:
       propertyPath: spawnTarget
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 4068676306709041261, guid: 9bc9782de6226de40bae045498481db9, type: 3}
+      propertyPath: SpawnProblem.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068676306709041261, guid: 9bc9782de6226de40bae045498481db9, type: 3}
+      propertyPath: SpawnProblem.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068676306709041261, guid: 9bc9782de6226de40bae045498481db9, type: 3}
+      propertyPath: SpawnProblem.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1920205256}
+    - target: {fileID: 4068676306709041261, guid: 9bc9782de6226de40bae045498481db9, type: 3}
+      propertyPath: SpawnProblem.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068676306709041261, guid: 9bc9782de6226de40bae045498481db9, type: 3}
+      propertyPath: SpawnProblem.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RandomiseText
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068676306709041261, guid: 9bc9782de6226de40bae045498481db9, type: 3}
+      propertyPath: SpawnProblem.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: TextRandomiser, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068676306709041261, guid: 9bc9782de6226de40bae045498481db9, type: 3}
+      propertyPath: SpawnProblem.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8943051060323137945, guid: 9bc9782de6226de40bae045498481db9, type: 3}
       propertyPath: m_Name
       value: BlockSpawner
@@ -4157,6 +4312,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6871731833514043752, guid: 44b8be9828b2a16458ac1f0657107f58, type: 3}
   m_PrefabInstance: {fileID: 1806198549}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1806198551 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8905630780491793861, guid: 44b8be9828b2a16458ac1f0657107f58, type: 3}
+  m_PrefabInstance: {fileID: 1806198549}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c706ff96d746d7647a337378bc2e6cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1867618372
 GameObject:
   m_ObjectHideFlags: 0
@@ -4307,6 +4473,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1920205256 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8905630780491793861, guid: 44b8be9828b2a16458ac1f0657107f58, type: 3}
+  m_PrefabInstance: {fileID: 895892463}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c706ff96d746d7647a337378bc2e6cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &1925945536 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6871731833514043752, guid: 44b8be9828b2a16458ac1f0657107f58, type: 3}

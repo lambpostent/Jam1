@@ -7,13 +7,22 @@ public class GameTracker : MonoBehaviour
 {
     #region Variables
     public float blocks;
+    private bool flowControl;
+
+    public UnityEvent Knockout;
     #endregion
+
+    private void Start()
+    {
+        flowControl = false;
+    }
 
     private void Update()
     {
-        if (blocks >= 10)
+        if (blocks >= 10 && !flowControl)
         {
-            Debug.Log("Platform reached bottom!");
+            Knockout?.Invoke();
+            flowControl = true;
         }
     }
     
