@@ -66,7 +66,6 @@ public class ParentingMethod : MonoBehaviour
         else if (onPlatform && spawnedNext)
         {
             transform.SetParent(platform);
-            //PlayRandomSound();
         }
     }
 

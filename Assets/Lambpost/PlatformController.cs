@@ -25,6 +25,10 @@ public class PlatformController : MonoBehaviour
     public GameTracker gt;
     private float previousCount;
 
+    //audio
+    public AudioSource audioSource;
+    public AudioClip[] clips;
+
     #endregion
 
     void Start()
@@ -83,12 +87,25 @@ public class PlatformController : MonoBehaviour
         float allChildCount = GetComponentsInChildren<Transform>().Length - 1;
         if (allChildCount != previousCount)
         {
+            if (allChildCount > previousCount)
+            {
+                PlayRandomSound();
+            }
             float blockWeight = allChildCount / 2;
             gt.blocks = allChildCount;
             transform.position = new Vector2(transform.position.x, -blockWeight);
             previousCount = allChildCount;
         }
     }
+
+    private void PlayRandomSound()
+    {
+        int index = Random.Range(0, clips.Length);
+        audioSource.clip = clips[index];
+        audioSource.Play();
+        UnityEngine.Debug.Log("PlaySound");
+    }
+
 
 
 
